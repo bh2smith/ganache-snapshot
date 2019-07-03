@@ -1,0 +1,37 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ]
+    },
+    "globals": {
+        "assert": true,
+        "contract": true,
+        "artifacts": true,
+        "web3": true,
+        "module": true,
+        "require": true,
+        "process": true
+      }
+}

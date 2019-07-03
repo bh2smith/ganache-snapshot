@@ -4,9 +4,7 @@
   "description": "backend tool for recording and reverting ganache snapshots.",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
-    "makeSnapshot": "node cli.js make",
-    "revertSnapshot": "node cli.js revert"
+    "lint": "./node_modules/.bin/eslint ."
   },
   "keywords": [
     "ganache",
