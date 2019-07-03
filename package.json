@@ -1,0 +1,22 @@
+{
+  "name": "ganache-snapshot",
+  "version": "1.0.0",
+  "description": "backend tool for recording and reverting ganache snapshots.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "makeSnapshot": "node cli.js make",
+    "revertSnapshot": "node cli.js revert"
+  },
+  "keywords": [
+    "ganache",
+    "snapshot",
+    "revert",
+    "dev-tools"
+  ],
+  "author": "Ben Smith",
+  "license": "ISC",
+  "dependencies": {
+    "web3": "^1.0.0-beta.55"
+  }
+}
