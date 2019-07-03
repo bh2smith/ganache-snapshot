@@ -17,6 +17,8 @@
   "author": "Ben Smith",
   "license": "ISC",
   "dependencies": {
+    "ganache": "^6.4.4",
+    "truffle": "^5.0.26",
     "web3": "^1.0.0-beta.55"
   }
 }
