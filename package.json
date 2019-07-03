@@ -9,6 +9,7 @@
     "revertSnapshot": "node cli.js revert"
   },
   "keywords": [
+    "ethereum",
     "ganache",
     "snapshot",
     "revert",
