@@ -3,11 +3,11 @@ const { makeSnapshot, revertSnapshot } = require("./index.js")
 
 module.exports = async (callback) => {
   try {
-    const arguments = process.argv.slice(4)
-    if (arguments.length > 2) {
+    const args = process.argv.slice(4)
+    if (args.length > 2) {
       callback("Error: This script requires arguments - <make> or <revert> <snapshotId>")
     }
-    const [todo, snapId] = arguments
+    const [todo, snapId] = args
 
     if (todo == "make") {
     //   console.log("Making snapshot")
