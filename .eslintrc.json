@@ -29,7 +29,6 @@
         "assert": true,
         "contract": true,
         "artifacts": true,
-        // "web3": true,
         "module": true,
         "require": true,
         "process": true
