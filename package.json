@@ -4,9 +4,7 @@
   "description": "backend tool for recording and reverting ganache snapshots.",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
-    "makeSnapshot": "node cli.js make",
-    "revertSnapshot": "node cli.js revert"
+    "lint": "./node_modules/.bin/eslint ."
   },
   "keywords": [
     "ganache",
@@ -17,8 +15,9 @@
   "author": "Ben Smith",
   "license": "ISC",
   "dependencies": {
-    "ganache": "^6.4.4",
-    "truffle": "^5.0.26",
-    "web3": "^1.0.0-beta.55"
+    "web3": "1.0.0-beta.37"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1"
   }
 }
