@@ -1,4 +1,4 @@
-const web3 = require('web3')
+const web3 = require("web3")
 
 const jsonrpc = "2.0"
 const id = 0
