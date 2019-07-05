@@ -1,19 +1,50 @@
 # Ganache Snapshot
 
+This plugin provides an easy and robut way to make and revert ganache snapshots for smart contract development.
+Generally speaking, this is a development tool for testing long sequences of transactions.
 
-### Dependencies 
-Generally speaking, this is a development tool for testing etherem smart contracts for long sequences of transactions. That is to say, it is very likely your development environment already has truffle as a primary dependency.
+## Installing the Plugin
 
-1. [Truffle](https://www.trufflesuite.com/)
-2. [Ganache](https://www.trufflesuite.com/ganache)
+To install the latest stable version from NPM:
+
+```console
+$ npm install -g ganache-snapshot
+```
 
 
-### Usage Example
+## Configuration & Usage
+Currently, the plugin must be activated on a per-project basis. If `ganache-snapshot` was installed to the Truffle project root, it will attempty to automatically include itself into `truffle-config.js`. If installed globally, you will need to manually add the following to `truffle-config.js` in the root directory of your Truffle project to enable the plugin:
+
+
+```javascript
+module.exports = {
+    plugins: [ "ganache-snapshot" ]
+};
+```
+
+### Usage Example - CLI
 
 ```bash
 # Make sure that Ganache is running (in a separate terminal)
-ganache-cli
-SNAP_ID=$(truffle exec cli.js make | grep '0x')
+
+SNAP_ID=$(truffle run snapshot make)
 # send some transaction...
-truffle exec cli.js revert $SNAP_ID
+truffle run snapshot revert $SNAP_ID
+```
+
+### Usage Example - truffle test
+
+An example contract has been provided here and the use case is found in `test/example.js` with description.
+Essentially, the recipe to follow is;
+
+```js
+const myContract = artifacts.require("SomeContract")
+const { 
+    makeSnapshot, 
+    revertSnapshot } = require("ganache-snapshot")
+
+const example = await myContract.new()           // Deploy contract
+const snapID = (await makeSnapshot(web3)).result // Take a snapshot and keep returned ID
+await example.sendTranaction()                   // Send TX
+await revertSnapshot(snapID, web3)               // revert snapshot (by ID)
 ```
