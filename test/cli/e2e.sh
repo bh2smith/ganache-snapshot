@@ -4,6 +4,7 @@ set -e
 
 STATE_BEFORE_SNAPSHOT=$(truffle exec test/cli/read_contract.js | tail -1)
 SNAP_ID=$(truffle run snapshot make)
+echo $STATE_BEFORE_SNAPSHOT
 
 STATE_AFTER_WRITE=$(truffle exec test/cli/write_contract.js | tail -1)
 
