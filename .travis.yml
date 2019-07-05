@@ -1,6 +1,10 @@
 language: node_js
 node_js:
   - '8'
+install:
+  - npm install -g ganache-cli truffle
+before_script:
+  - ganache-cli > /dev/null &
 script:
   - npm run lint
   - truffle test
