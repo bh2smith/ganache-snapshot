@@ -6,5 +6,5 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
     },
   },
-  // plugins: [ "ganache-snapshot" ], // This is only for demonstration purposes. 
+  plugins: [ "ganache-snapshot" ], // This is only for demonstration purposes.
 }

@@ -16,8 +16,9 @@ const send = function (method, params, web3Provider) {
 
 // make ganache snapshot 
 const makeSnapshot = async function(web3Provider=web3) {
-  const res = await send("evm_snapshot", [], web3Provider)
-  return res
+  const response = await send("evm_snapshot", [], web3Provider)
+  return response.result
+
 }
 
 // revert ganache snapshot 

@@ -17,7 +17,7 @@ module.exports = async (config) => {
   }
   const [, todo, snapId] = config._
   if (todo == "make") {
-    const snapID = (await makeSnapshot(web3)).result
+    const snapID = await makeSnapshot(web3)
     console.log(snapID)
   } else if (todo == "revert") {
     await revertSnapshot(snapId, web3)
