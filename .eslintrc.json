@@ -32,7 +32,6 @@
         "artifacts": true,
         "module": true,
         "require": true,
-        "process": true,
         "web3": true
       }
 }
