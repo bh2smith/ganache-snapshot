@@ -6,15 +6,5 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
     },
   },
-  plugins: [ "ganache-snapshot" ],
-  // Set default mocha options here, use special reporters etc.
-  mocha: {
-    // timeout: 100000
-  },
-
-  // Configure your compilers
-  compilers: {
-    solc: {
-    }
-  }
+  // plugins: [ "ganache-snapshot" ], // This is only for demonstration purposes. 
 }
