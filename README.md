@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/bh2smith/ganache-snapshot.svg?branch=master)](https://travis-ci.com/bh2smith/ganache-snapshot)
+
 # Ganache Snapshot
 
 This plugin provides an easy and robut way to make and revert ganache snapshots for smart contract development.
