@@ -2,7 +2,7 @@
 
 set -e
 
-truffle exec test/cli/read_contract.js | grep -E '^[[:digit:]]+$'
+truffle exec test/cli/read_contract.js
 truffle run snapshot make
 truffle exec test/cli/write_contract.js | grep -E '^[[:digit:]]+$'
 truffle exec test/cli/read_contract.js | grep -E '^[[:digit:]]+$'
