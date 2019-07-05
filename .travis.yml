@@ -10,3 +10,4 @@ before_script:
 script:
   - npm run lint
   - truffle test
+  - ./test/cli/e2e.sh
