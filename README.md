@@ -22,6 +22,9 @@ module.exports = {
 };
 ```
 
+Note also that, currently, the `development` network of the truffle configuration should be uncommented.
+That is, development network is the hardcoded web3Provider and is expected to be declared.
+
 ### Usage Example - CLI
 
 ```bash
