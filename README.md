@@ -42,9 +42,7 @@ Essentially, the recipe to follow is;
 
 ```js
 const myContract = artifacts.require("SomeContract")
-const { 
-    makeSnapshot, 
-    revertSnapshot } = require("ganache-snapshot")
+const { makeSnapshot, revertSnapshot } = require("ganache-snapshot")
 
 const example = await myContract.new()           // Deploy contract
 const snapID = (await makeSnapshot(web3)).result // Take a snapshot and keep returned ID
