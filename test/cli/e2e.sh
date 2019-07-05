@@ -2,11 +2,11 @@
 
 set -e
 
-STATE_BEFORE_SNAPSHOT=$(truffle exec test/cli/read_contract.js | awk 'NR==3')
+STATE_BEFORE_SNAPSHOT=$(truffle exec test/cli/read_contract.js | grep -E '^[[:digit:]]+$')
 SNAP_ID=$(truffle run snapshot make)
 echo $STATE_BEFORE_SNAPSHOT
 
-STATE_AFTER_WRITE=$(truffle exec test/cli/write_contract.js | awk 'NR==3')
+STATE_AFTER_WRITE=$(truffle exec test/cli/write_contract.js | grep -E '^[[:digit:]]+$')
 
 if [ "$STATE_AFTER_WRITE" -eq "$STATE_BEFORE_SNAPSHOT" ]
 then
@@ -15,7 +15,7 @@ then
 fi
 
 truffle run snapshot revert $SNAP_ID
-STATE_AFTER_REVERT=$(truffle exec test/cli/read_contract.js | awk 'NR==3')
+STATE_AFTER_REVERT=$(truffle exec test/cli/read_contract.js | grep -E '^[[:digit:]]+$')
 
 if [ "$STATE_AFTER_REVERT" -ne "$STATE_BEFORE_SNAPSHOT" ]
 then
