@@ -3,6 +3,7 @@ node_js:
   - '8'
 install:
   - npm install -g ganache-cli truffle
+  - npm install
 before_script:
   - ganache-cli > /dev/null &
 script:
