@@ -4,6 +4,7 @@ node_js:
 install:
   - npm install -g ganache-cli truffle
   - npm install
+  - truffle compile
   - npm link # ganache-snapshot needs to be installed to test plugin functionality
 before_script:
   - ganache-cli > /dev/null &
