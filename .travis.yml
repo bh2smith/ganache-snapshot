@@ -7,6 +7,9 @@ install:
   - npm install
 before_script:
   - ganache-cli > /dev/null &
+  - truffle migrate
+  - npm link # ganache-snapshot needs to be installed to test plugin functionality
 script:
   - npm run lint
   - truffle test
+  - ./test/cli/e2e.sh
