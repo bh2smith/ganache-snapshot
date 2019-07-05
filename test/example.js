@@ -1,10 +1,6 @@
 const Example = artifacts.require("ExampleContract")
 
-<<<<<<< HEAD
-const { makeSnapshot, revertSnapshot } = require("../index.js")
-=======
 const { makeSnapshot, revertSnapshot } = require("../index.js")  // replace with "ganache-snapshot"
->>>>>>> ec7e93dfd98f0ebfee10f37acf837c6954193655
 
 contract("ExampleContract", async () => {
   describe("incrementValue()", () => {
