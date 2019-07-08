@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/bh2smith/ganache-snapshot.svg?branch=master)](https://travis-ci.com/bh2smith/ganache-snapshot)
+[![npm version](https://badge.fury.io/js/ganache-snapshot.svg)](https://badge.fury.io/js/ganache-snapshot)
 
 # Ganache Snapshot
 
